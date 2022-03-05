@@ -11,15 +11,19 @@ class CalculateMedian {
 
         // Verificando caso a caso
         if (n % 2 != 0)
-            return (double)a[n / 2];
+            return a[n / 2];
 
-        return (double)(a[(n - 1) / 2] + a[n / 2]) / 2.0;
+        return (a[(n - 1) / 2] + a[n / 2]) / 2.0;
     }
 
-    public static void main(String args[])
+    public static double main(int[] args)
     {
         int a[] = { 9, 2, 1, 4, 6 };
         int n = a.length;
         System.out.println("Mediana = " + findMedian(a, n));
+
+
+        return findMedian(a, n);
     }
 }
+
